@@ -2,8 +2,9 @@ import math
 
 print("Ввод координат точек (через пробел)")
 coordinates = []
+coordinates_count = 2
 
-for i in range(1, 3):
+for i in range(1, coordinates_count):
     input_string = input(f'Введите координаты точки {i}: ').split()
     point = tuple(map(int, input_string))
     coordinates.append(point)
