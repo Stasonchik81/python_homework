@@ -5,7 +5,7 @@ table_of_checks = [(False, False, False),
                     (True, False, False),
                     (True, False, True),
                     (True, True, False),
-                    (True, True, True),]
+                    (True, True, True)]
 def checkIt(x, y, z):
     return not (x or y or z) == (not x) and (not y) and (not z)
 
