@@ -4,7 +4,7 @@ print("Ввод координат точек (через пробел)")
 coordinates = []
 coordinates_count = 2
 
-for i in range(1, coordinates_count):
+for i in range(1, coordinates_count + 1):
     input_string = input(f'Введите координаты точки {i}: ').split()
     point = tuple(map(int, input_string))
     coordinates.append(point)
