@@ -1,4 +1,4 @@
-# multiple pare
+# multiple pare of elements
 
 from My_modules import my_lib
 

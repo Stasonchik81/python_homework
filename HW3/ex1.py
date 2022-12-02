@@ -1,4 +1,4 @@
-# summ of odd elements in list
+# summ of odd elements in my list
 
 from My_modules import my_lib
 
