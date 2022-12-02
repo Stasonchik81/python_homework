@@ -15,9 +15,9 @@ def rand_list(len_, min_: int, max_: int, type_: str = 'int', dig: int = 2):
     return list_
 
 
-
 def main():
     print(rand_list(5, 1, 10, 'float', 1))
+
 
 if __name__ == "__main__":
     main()
