@@ -11,6 +11,6 @@ def my_round_float(num: float, d: float = 1):
     else:
         return int(temp/10)*d
 
-result = my_round_float(PI, 0.001)
+result = my_round_float(PI, 0.01)
 print(result)
 
