@@ -4,17 +4,27 @@ import random as rd
 
 k = int(input("Введите степень многочлена: "))
 cof = tuple([rd.randint(1, 100) for i in range(k + 1)])
-list_of_polinom = []
 
-for i in range(k + 1):
-    if k - i == 1:
-        list_of_polinom.append(f"{cof[i]}*X")
-    elif i == k:
-        list_of_polinom.append(f"{cof[i]}")
-    else:
-        list_of_polinom.append(f"{cof[i]}*(X**{k-i})")
+def set_polinome_list(indexes: list[int], k: int = 6):
+    result_p_list = []
+    for i in range(k + 1):
+        if k - i == 1:
+            result_p_list.append(f"{indexes[i]}*X")
+        elif i == k:
+            result_p_list.append(f"{indexes[i]}")
+        else:
+            result_p_list.append(f"{indexes[i]}*(X**{k-i})")
+    return result_p_list
 
-with (open("polinome.txt", 'w')) as poli:
+def main():
+    list_of_polinom_1 = set_polinome_list(cof, k)
 
-    print(" + ".join(list_of_polinom), file=poli, end="")
-    poli.write(" = 0")
+    with (open(f"polinome1.txt", 'w')) as poli:
+
+        print(" + ".join(list_of_polinom_1), file=poli, end="")
+        poli.write(" = 0")
+
+
+if __name__ == "__main__":
+    main()
+
